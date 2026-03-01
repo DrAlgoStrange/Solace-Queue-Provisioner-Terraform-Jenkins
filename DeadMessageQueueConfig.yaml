@@ -1,0 +1,62 @@
+# DeadMessageQueueConfig.yaml
+# Settings applied to ALL Dead Message Queues declared in MessageQueue.yaml
+# (any queue entry that is referenced by another queue's 'dmq' field).
+# Leave a field as "" (empty) to keep the Solace broker default for that setting.
+
+queue_config:
+
+  # Incoming messages enabled
+  # true / false / "" (default)
+  ingress_enabled: true
+
+  # Outgoing messages enabled
+  # true / false / "" (default)
+  egress_enabled: true
+
+  # Access Type: "exclusive" or "non-exclusive"
+  # "" = default
+  access_type: "exclusive"
+
+  # Messages Queued Quota (MB)
+  # "" = default
+  max_msg_spool_usage: 1500
+
+  # Owner (Solace client username)
+  # "" = no owner
+  owner: ""
+
+  # Non-Owner Permission
+  # "no-access" / "read-only" / "consume" / "modify-topic" / "delete"
+  # "" = default
+  permission: "consume"
+
+  # Maximum Consumer Count
+  # "" = default
+  max_bind_count: 1000
+
+  # Maximum Delivered Unacknowledged Messages per Flow
+  # "" = default
+  max_delivered_unacked_msgs_per_flow: 10000
+
+  # Enable Client Delivery Count
+  # true / false / "" (default)
+  delivery_count_enabled: false
+
+  # Delivery Delay (sec)
+  # 0 = no delay / "" = default
+  delivery_delay: 0
+
+  # Respect TTL
+  # true / false / "" (default)
+  respect_ttl: true
+
+  # Maximum TTL (sec)
+  # 0 = no max / "" = default
+  max_ttl: 77660000
+
+  # Redelivery (typically disabled on DMQs to avoid infinite loops)
+  # true / false / "" (default)
+  redelivery_enabled: false
+
+  # Maximum Redelivery Count
+  max_redelivery_count: ""

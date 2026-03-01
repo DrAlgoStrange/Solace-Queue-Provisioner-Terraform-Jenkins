@@ -1,0 +1,4 @@
+solace:
+  semp_url: "https://mr-connection-udw13536laf.messaging.solace.cloud:943"
+  message_vpn: "test-tvpn-dev"
+  solace_credentials_id: "SOLACE_CREDENTIALS"

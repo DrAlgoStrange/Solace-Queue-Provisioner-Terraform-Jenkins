@@ -23,7 +23,7 @@ queue_config:
 
   # Owner (Solace client username)
   # "" = no owner
-  owner: ""
+  owner: "solace-cloud-client"
 
   # Non-Owner Permission
   # "no-access" / "read-only" / "consume" / "modify-topic" / "delete"

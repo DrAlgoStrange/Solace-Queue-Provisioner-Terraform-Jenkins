@@ -160,7 +160,7 @@ resource "solacebroker_msg_vpn_queue" "dead_message_queues" {
   delivery_count_enabled = var.dmq_config.delivery_count_enabled != "" ? tobool(var.dmq_config.delivery_count_enabled)  : null
   delivery_delay         = var.dmq_config.delivery_delay         != "" ? tonumber(var.dmq_config.delivery_delay)         : null
 
-  respect_ttl_enabled = var.mq_config.respect_ttl != "" ? tobool(var.mq_config.respect_ttl) : null
+  respect_ttl_enabled = var.dmq_config.respect_ttl != "" ? tobool(var.dmq_config.respect_ttl) : null
   max_ttl     = var.dmq_config.max_ttl     != "" ? tonumber(var.dmq_config.max_ttl)   : null
 
   redelivery_enabled   = var.dmq_config.redelivery_enabled   != "" ? tobool(var.dmq_config.redelivery_enabled)    : null

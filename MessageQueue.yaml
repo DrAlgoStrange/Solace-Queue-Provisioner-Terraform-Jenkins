@@ -18,7 +18,8 @@
 queues:
   - name: "q/PurchaseOrder/Create"
     dmq: "dmq/PurchaseOrder/Create"
-    
+    topics:
+      - "purchase/order/create"
   - name: "q/OrderConfirmation/POST/Update"
     dmq: "dmq/OrderConfirmation/POST/Update"
     

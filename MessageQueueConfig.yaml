@@ -60,4 +60,4 @@ queue_config:
 
   # Maximum Redelivery Count
   # "" = unlimited (when redelivery_enabled is true)
-  max_redelivery_count: ""
+  max_redelivery_count: "0"
